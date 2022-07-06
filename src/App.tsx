@@ -7,12 +7,20 @@ import { useState } from "react";
 function App() {
   const [count, setCount] = useState<number>(() => 0);
 
+  const incrementCount = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  const decrementCount = () => {
+    setCount((prevCount) => prevCount - 1);
+  };
+
   return (
     <>
       <div className="app">
-        <DecrementButton decrementCount={setCount} />
+        <DecrementButton decrementCount={decrementCount} />
         <Counter count={count} />
-        <IncrementButton incrementCount={setCount} />
+        <IncrementButton incrementCount={incrementCount} />
       </div>
     </>
   );
