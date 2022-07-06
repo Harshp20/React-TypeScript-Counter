@@ -5,7 +5,7 @@ import DecrementButton from "./components/DecrementButton";
 import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState<number>(() => 0);
+  const [count, setCount] = useState(() => 0);
 
   return (
     <>
